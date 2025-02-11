@@ -8,134 +8,132 @@ import pandas as pd
 # Updated SDOH Categories Dataset with cross-category connections
 sdoh_data = {
     "Primary Categories": {
-        # "Amenities": [
-        #     "Recreational Establishments", 
-        #     "Arts, Entertainment",
-        #     "Personal Care Services and Laundromats",
-        #     "Eating and Drinking Places",
-        #     "Parks",
-        #     "Religious, Civic and Social Organizations"
-        # ],
-        # "Arts": [
-        #     "Arts, Entertainment", 
-        # ],
-        # "Civics": [
-        #     "Post Offices and Banks", 
-        #     "Religious, Civic and Social Organizations",
-        #     "Social Services",
-        #     "Voter Registration, Turnout, and Partisanship"
-        # ],
-        # "COVID-19": [
-        #     "COVID-19", 
-        #     "Demographics"
-        # ],
+        "Amenities": [
+            "Recreational Establishments", 
+            "Arts, Entertainment",
+            "Personal Care Services and Laundromats",
+            "Eating and Drinking Places",
+            "Parks",
+            "Religious, Civic and Social Organizations"
+        ],
+        "Arts": [
+            "Arts, Entertainment", 
+        ],
+        "Civics": [
+            "Post Offices and Banks", 
+            "Religious, Civic and Social Organizations",
+            "Social Services",
+            "Voter Registration, Turnout, and Partisanship"
+        ],
+    
         "Crime": [
             "Crimes", 
             "Law Enforcement"
         ],
-        # "Demographics": [
-        #     "Mortgages", 
-        #     "Essential Workers",
-        #     "Neighborhood-School Gap",
-        #     "Socioeconomic Status and Demographic Characterisitics",
-        #     "Urbanicity"
-        # ],        
-        # "Education": [
-        #     "Education and Training Services", 
-        #     "Neighborhood-School Gap",
-        #     "School District Characterisitics and School Counts"
-        # ],
-        # "Food": [
-        #     "Dollar Stores", 
-        #     "Eating and Drinking Places",
-        #     "Grocery Stores"
-        # ],
-        # "Government": [
-        #     "Mortgages", 
-        #     "Post Offices and Banks",
-        #     "Social Serivces",
-        #     "Voter Registration, Turnout, and Partisanship"
-        # ],
-        "Healtcare": [
-            "Health Care Services", 
+        "Demographics": [
+            "Mortgages", 
+            "Essential Workers",
+            "Neighborhood-School Gap",
+            "Socioeconomic Status and Demographic Characterisitics",
+            "Urbanicity"
+        ],        
+        "Education": [
+            "Education and Training Services", 
+            "Neighborhood-School Gap",
+            "School District Characterisitics and School Counts"
         ],
-      #   "Housing": [
-      #       "Mortgages", 
-      #   ],
-      #   "Internet": [
-      #       "Broadband Internet Availability, Speed, and Adoption", 
-      #       "Internet Access",
-      #   ],
-      # "Land Cover": [
-      #       "Land Cover", 
-      #       "Parks", 
-      #       "Polluting Sites", 
-      #       "Primary and Secondary Roads", 
-      #       "Street Connectivity", 
-      #       "Urbanicity", 
-      #   ],
-      # "Outdoors": [
-      #       "Land Cover",
-      #       "Parks",
-      #       "Polluting Sites",
-      #       "Weather" 
-      #   ],
-      # "Public Transit": [
-      #       "Public Transit Stops",
-      #   ],
-      # "Social Serivces": [
-      #       "Social Services",
-      #   ],
-      # "Stores": [
-      #       "Recreational Establishments",
-      #       "Dollar Stores",
-      #       "Grocery Stores",
-      #       "Liquor, Tobacco, Cannabis, Vape and Convenience Stores",
-      #       "Personal Care Services and Laundromats",
-      #       "Retail Establishments"
-      #   ],
-      # "Traffic": [
-      #       "Primary annd Secondary Roads",
-      #       "Public Transit Stops",
-      #       "Street Connectivity",
-      #       "Traffic Volume"
-      #   ],
+        "Food": [
+            "Dollar Stores", 
+            "Eating and Drinking Places",
+            "Grocery Stores"
+        ],
+        "Government": [
+            "Mortgages", 
+            "Post Offices and Banks",
+            "Social Serivces",
+            "Voter Registration, Turnout, and Partisanship"
+        ],
+        "Healthcare": [
+            "Health Care Services", 
+            "COVID-19"
+        ],
+        "Housing": [
+            "Mortgages", 
+        ],
+        # "Internet": [
+        #     "Broadband Internet Availability, Speed, and Adoption", 
+        #     "Internet Access",
+        # ],
+      "Land Cover": [
+            "Parks", 
+            "Polluting Sites", 
+            "Primary and Secondary Roads", 
+            "Street Connectivity", 
+            "Urbanicity", 
+        ],
+      "Outdoors": [
+            "Parks",
+            "Polluting Sites",
+            "Weather" 
+        ],
+      "Public Transit": [
+            "Public Transit Stops",
+        ],
+      "Social Serivces": [
+            "Social Services",
+        ],
+      "Stores": [
+            "Recreational Establishments",
+            "Dollar Stores",
+            "Grocery Stores",
+            "Liquor, Tobacco, Cannabis, Vape and Convenience Stores",
+            "Personal Care Services and Laundromats",
+            "Retail Establishments"
+        ],
+      "Traffic": [
+            "Primary annd Secondary Roads",
+            "Public Transit Stops",
+            "Street Connectivity",
+            "Traffic Volume"
+        ],
     },
     "Cross-Category Connections": [
-        # {"category": "Recreational Establishments", "primary_categories": ["Amenities", "Stores"]},
-        # {"category": "Arts, Entertainment", "primary_categories": ["Amenities", "Arts"]},
-        # {"category": "Eating and Drinking Places", "primary_categories": ["Amenities", "Food"]},
-        # {"category": "Parks", "primary_categories": ["Amenities", "Land Cover", "Outdoors"]},
-        # {"category": "Personal Care Services and Laundromats", "primary_categories": ["Amenities", "Stores"]},
-        # {"category": "Religious, Civic and Social Organizations", "primary_categories": ["Amenities", "Civics"]},
-        # {"category": "Post Offices and Banks", "primary_categories": ["Civics", "Government"]},
+        {"category": "Recreational Establishments", "primary_categories": ["Amenities", "Stores"]},
+        {"category": "Arts, Entertainment", "primary_categories": ["Amenities", "Arts"]},
+        {"category": "Eating and Drinking Places", "primary_categories": ["Amenities", "Food"]},
+        {"category": "Parks", "primary_categories": ["Amenities", "Land Cover", "Outdoors"]},
+        {"category": "Personal Care Services and Laundromats", "primary_categories": ["Amenities", "Stores"]},
+        {"category": "Religious, Civic and Social Organizations", "primary_categories": ["Amenities", "Civics"]},
+        {"category": "Post Offices and Banks", "primary_categories": ["Civics", "Government"]},
         # {"category": "Social Services", "primary_categories": ["Civics", "Government","Social Services"]},
-        # {"category": "Voter Registration, Turnout, and Partisanship", "primary_categories": ["Civics", "Government"]},
-        # {"category": "Essential Workers", "primary_categories": ["COVID-19","Demographics"]},
-        {"category": "Crimes", "primary_categories": ["Crime"]},
-        {"category": "Law Enforcement", "primary_categories": ["Crime"]},
-        # {"category": "Mortgages", "primary_categories": ["Demographics", "Government","Housing"]},
-        # {"category": "Neighborhood-School Gap", "primary_categories": ["Demographics", "Education"]},
-        # {"category": "Socioeconomic Status and Demographic Characterisitics", "primary_categories": ["Demographics"]},
-        # {"category": "Urbanicity", "primary_categories": ["Demographics", "Land Cover"]},
-        # {"category": "Education and Training Services", "primary_categories": ["Education"]},
-        # {"category": "Neighborhood-School Gap", "primary_categories": ["Demographics", "Education"]},
-        # {"category": "School District Characterisitics and School Counts", "primary_categories": ["Education"]},
-        # {"category": "Dollar Stores", "primary_categories": ["Food", "Stores"]},
-        # {"category": "Grocery Stores", "primary_categories": ["Food", "Stores"]},
-        {"category": "Health Care Services", "primary_categories": ["Healtcare"]},
-        # {"category": "Broadband Internet Availability, Speed, and Adoption", "primary_categories": ["Internet"]},
-        # {"category": "Internet Access", "primary_categories": ["Internet"]},
-        # {"category": "Land Cover", "primary_categories": ["Land Cover", "Outdoors"]},
-        # {"category": "Polluting Sites", "primary_categories": ["Land Cover","Outdoors"]},
-        # {"category": "Primary and Secondary Roads", "primary_categories": ["Land Cover","Traffic"]},
-        # {"category": "Street Connectivity", "primary_categories": ["Land Cover", "Traffic"]},
-        # {"category": "Urbanicity", "primary_categories": ["Demographics", "Land Cover"]},
-        # {"category": "Weather", "primary_categories": ["Outdoors"]},
-        # {"category": "Public Transit Stops", "primary_categories": ["Public Transit", "Traffic"]},
-        # {"category": "Liquor, Tobacco, Cannabis, Vape and Convenience Stores", "primary_categories": ["Stores"]},
-        # {"category": "Retail Establishments", "primary_categories": ["Stores"]},
-        # {"category": "Traffic Volume", "primary_categories": ["Traffic"]}
+        {"category": "Voter Registration, Turnout, and Partisanship", "primary_categories": ["Civics", "Government"]},
+        {"category": "Essential Workers", "primary_categories": ["Healthcare","Demographics"]},
+        #{"category": "Crimes", "primary_categories": ["Crime"]},
+        #{"category": "Law Enforcement", "primary_categories": ["Crime"]},
+        {"category": "Mortgages", "primary_categories": ["Demographics", "Government","Housing"]},
+        {"category": "Neighborhood-School Gap", "primary_categories": ["Demographics", "Education"]},
+        {"category": "Socioeconomic Status and Demographic Characterisitics", "primary_categories": ["Demographics"]},
+        {"category": "Urbanicity", "primary_categories": ["Demographics", "Land Cover"]},
+        {"category": "Education and Training Services", "primary_categories": ["Education"]},
+        {"category": "Neighborhood-School Gap", "primary_categories": ["Demographics", "Education"]},
+        {"category": "School District Characterisitics and School Counts", "primary_categories": ["Education"]},
+        {"category": "Dollar Stores", "primary_categories": ["Food", "Stores"]},
+        {"category": "Grocery Stores", "primary_categories": ["Food", "Stores"]},
+        {"category": "Health Care Services", "primary_categories": ["Healthcare"]},
+        #{"category": "Broadband Internet Availability, Speed, and Adoption", "primary_categories": ["Internet"]},
+        #{"category": "Internet Access", "primary_categories": ["Internet"]},
+        #{"category": "Land Cover", "primary_categories": ["Outdoors"]},
+        {"category": "Polluting Sites", "primary_categories": ["Land Cover","Outdoors"]},
+        {"category": "Primary and Secondary Roads", "primary_categories": ["Land Cover","Traffic"]},
+        {"category": "Street Connectivity", "primary_categories": ["Land Cover", "Traffic"]},
+        {"category": "Urbanicity", "primary_categories": ["Demographics", "Land Cover"]},
+        {"category": "Weather", "primary_categories": ["Outdoors"]},
+        {"category": "Public Transit Stops", "primary_categories": ["Public Transit", "Traffic"]},
+        {"category": "Liquor, Tobacco, Cannabis, Vape and Convenience Stores", "primary_categories": ["Stores"]},
+        {"category": "Retail Establishments", "primary_categories": ["Stores"]},
+        {"category": "Traffic Volume", "primary_categories": ["Traffic"]},
+        {"category": "Crime", "primary_categories": ["Civics"]}
+
     ]
 }
 
@@ -185,7 +183,8 @@ labels = {node: node for node in G.nodes()}
 wrapped_labels = wrap_labels(labels)
 
 # Draw primary nodes
-primary_nodes = [node for node, attrs in G.nodes(data=True) if attrs['node_type'] == 'primary']
+print(G.nodes(data=True))
+primary_nodes = [node for node, attrs in G.nodes(data=True) if attrs['node_type'] == "primary"]
 nx.draw_networkx_nodes(G, pos, 
                        nodelist=primary_nodes, 
                        node_color='lightblue', 
